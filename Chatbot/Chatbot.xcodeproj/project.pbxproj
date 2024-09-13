@@ -6,6 +6,10 @@
 	objectVersion = 70;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		93A51D632C932F1A008A2912 /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = 93A51D622C932F1A008A2912 /* GoogleGenerativeAI */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		93F0F7B92C92780400D7D3B4 /* Chatbot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chatbot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -19,6 +23,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93A51D632C932F1A008A2912 /* GoogleGenerativeAI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +66,7 @@
 			);
 			name = Chatbot;
 			packageProductDependencies = (
+				93A51D622C932F1A008A2912 /* GoogleGenerativeAI */,
 			);
 			productName = Chatbot;
 			productReference = 93F0F7B92C92780400D7D3B4 /* Chatbot.app */;
@@ -90,6 +96,9 @@
 				Base,
 			);
 			mainGroup = 93F0F7B02C92780400D7D3B4;
+			packageReferences = (
+				93A51D612C932F1A008A2912 /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
+			);
 			productRefGroup = 93F0F7BA2C92780400D7D3B4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -314,6 +323,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		93A51D612C932F1A008A2912 /* XCRemoteSwiftPackageReference "generative-ai-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google-gemini/generative-ai-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.6;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		93A51D622C932F1A008A2912 /* GoogleGenerativeAI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93A51D612C932F1A008A2912 /* XCRemoteSwiftPackageReference "generative-ai-swift" */;
+			productName = GoogleGenerativeAI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 93F0F7B12C92780400D7D3B4 /* Project object */;
 }
