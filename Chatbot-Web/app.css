@@ -6,6 +6,60 @@ body {
 }
 
 #chat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   padding: 20px;
+  border: solid 4px black;
+  border-bottom: solid 10px black;
+  border-right: solid 10px black;
+  border-radius: 15px;
+  background-color: #ffff00;
+  width: 50vw;
+  min-height: 50vh;
+  max-height: fit-content;
+}
+
+#chat-box {
+  min-height: 90%;
+}
+
+input {
   border: solid 3px black;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.prompt-container {
+  display: flex;
+  justify-content: right;
+}
+.response-container {
+  display: flex;
+  justify-content: left;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+}
+
+.chat-bubble {
+  display: inline-block;
+  visibility: hidden;
+  background-color: white;
+  color: black;
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 10px 10px;
+  margin: 5px;
+}
+
+.lexend-mega-400 {
+  font-family: "Lexend Mega", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }

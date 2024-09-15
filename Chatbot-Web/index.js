@@ -3,7 +3,9 @@ document.getElementById("send-button").addEventListener("click", sendMessage);
 async function sendMessage() {
   const userInput = document.getElementById("user-input").value;
   console.log(userInput);
-  document.querySelector("#prompt").textContent = userInput;
+  let promptEle = document.querySelector("#prompt");
+  promptEle.textContent = userInput;
+  promptEle.style.visibility = "visible";
 
   const apiKey = "key";
   const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`;
@@ -30,5 +32,7 @@ async function sendMessage() {
 
   const responseData = await response.json();
   const unrwappedResponse = responseData.candidates[0].content.parts[0].text;
-  document.querySelector("#response").textContent = unrwappedResponse;
+  let responseEle = document.querySelector("#response");
+  responseEle.textContent = unrwappedResponse;
+  responseEle.style.visibility = "visible";
 }
